@@ -1,0 +1,68 @@
+
+
+
+
+<section id="slider">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <% @capas.each_with_index do |photo, n| %>
+       <li data-target="#myCarousel" data-slide-to="<%= n %>" class="<%= n == 0 ? 'active' : '' %>"></li>
+        <% end %>
+      </ol>
+
+      <div class="carousel-inner">
+
+
+
+        <div class="carousel-inner" role="listbox">
+          <% @capas.each_with_index do |photo, n| %>
+          <div class="item <%= n == 0 ? 'active' : '' %>">
+            <%= image_tag photo.imagem.url(:medium) %>
+
+          </div>
+          <% end %>
+        </div>
+
+
+
+				<a class="home-carousel-left" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+				<a class="home-carousel-right" href="#myCarousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
+			</div>
+		</div> <!--/#home-carousel-->
+    </section>
+
+
+
+
+
+
+    <% if current_user  %>
+    <section id="our-team">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h1>Our Team</h1>
+						<span class="st-border"></span>
+					</div>
+				</div>
+        <% @capas.each do |capa| %>
+				<div class="col-md-3 col-sm-6">
+					<div class="team-member">
+						<div class="member-image">
+              <%= image_tag capa.imagem.url(:thumb),class:"img-responsive" %>
+              <p class="recipe-delete"><%= link_to "Delete", capa_path(capa.id), method: "delete" %><p>
+						</div>
+						<div class="member-info">
+							<span><%= capa.descricao %></span>
+
+						</div>
+					</div>
+				</div>
+        <% end %>
+        <% end %>
+
+
+			</div>
+		</div>
+	</section>

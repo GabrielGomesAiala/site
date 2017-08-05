@@ -1,0 +1,15 @@
+<div class="tag">
+  <div class="container">
+    <h2><%= @produto.nome %></h2>
+
+    <div class="cards row">
+      <% @image.each do |f| %>
+      <div class="card col-xs-4">
+        <p><%= image_tag f.imagem.url(:medium) %></p>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="messages">
+  <div class="container">
+  	<% @capas.each do |capa| %>
+			<div class="message">
+        <p class="content"><%= image_tag capa.imagem.url(:thumb) %></p>
+  			<p class="time"><%= capa.descricao %></p>
+
+			</div>
+		<% end %>
+
+  </div>
+</div>

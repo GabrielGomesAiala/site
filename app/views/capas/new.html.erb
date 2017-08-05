@@ -1,0 +1,19 @@
+<div class="create">
+  <div class="container">
+   	<%= form_for @capa, :html => {multipart: true}  do |f| %>
+
+      <div class="field">
+        <%= f.label :cescricao %>
+    		<%= f.text_area :descricao %>
+      </div>
+      <div class="field">
+        <%= f.label :imagem %>
+    		<%= f.file_field :imagem %>
+      </div>
+
+  		<div class="actions">
+    		<%= f.submit "Create" %>
+  		</div>
+		<% end %>
+  </div>
+</div>

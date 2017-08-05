@@ -1,0 +1,13 @@
+<div class="messages">
+  <div class="container">
+  	<% @produtos.each do |produto| %>
+			<div class="message">
+        <p class="content"><%= image_tag produto.imagem.url(:thumb) %></p>
+  			<p class="time"><%= produto.nome %></p>
+        <td><%= link_to 'Destroy', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+			</div>
+		<% end %>
+
+  </div>
+</div>

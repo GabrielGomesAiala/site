@@ -1,0 +1,27 @@
+<div class="create">
+  <div class="container">
+   	<%= form_for @produto, :html => {multipart: true}  do |f| %>
+
+      <div class="field">
+        <%= f.label :nome %>
+    		<%= f.text_area :nome %>
+      </div>
+      <div class="field">
+        <%= f.label :descricao %>
+    		<%= f.text_area :descricao %>
+      </div>
+      <div class="field">
+        <%= f.label :tipo %>
+    		<%= f.text_area :tipo %>
+      </div>
+      <div class="field">
+        <%= f.label :imagem %>
+    		<%= f.file_field :imagem %>
+      </div>
+      
+  		<div class="actions">
+    		<%= f.submit "Create" %>
+  		</div>
+		<% end %>
+  </div>
+</div>
