@@ -3,6 +3,7 @@
     <h2><%= @produto.nome %></h2>
     <% if current_user  %>
       <p class="recipe-delete"><%= link_to "Delete", produto_path(@produto), method: "delete" %><p>
+        <p class="recipe-delete"><a href="/admin/produtos/new/<%= @produto.id %>">foto new</a><p>
     <% end %>
 
     <div class="cards row">
@@ -13,10 +14,11 @@
       </div>
       <% if current_user  %>
         <p class="recipe-delete"><%= link_to "Delete", foto_path(f.id), method: "delete" %><p>
+
       <% end %>
       <% end %>
 
     </div>
-    
+
   </div>
 </div>

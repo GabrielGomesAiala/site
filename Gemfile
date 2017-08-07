@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip", "~> 5.0.0"
 #gem "aws-sdk","~> 1.16.1"
 
-gem 'bootstrap-sass'
+gem "twitter-bootstrap-rails"
 
 
 # Use Capistrano for deployment

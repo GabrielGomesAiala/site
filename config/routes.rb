@@ -3,11 +3,12 @@ Rails.application.routes.draw do
 
   # inicio adimin
   get 'signup'  => 'users#new'
+
   resources :users
 
   get '/admin' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
 
   get '/admin/capas' => 'capas#index'
   get '/admin/capas/new' => 'capas#new'
@@ -32,5 +33,5 @@ Rails.application.routes.draw do
   resources :produtos
   resources :fotos
   resources :capas
-    
+
 end
