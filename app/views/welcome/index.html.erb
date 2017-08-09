@@ -8,7 +8,7 @@
 
 
 				<% @capas.each_with_index do |photo, n| %>
-				<div class="item <%= n == 0 ? 'active' : '' %>" style="background-image:url(<%= photo.imagem.url(:medium) %>)">
+				<div class="item <%= n  == 0 ? 'active' : '' %>" style="background-image:url(<%= photo.imagem.url(:medium) %>)">
 
 					<div class="carousel-caption container">
 						<div class="row">
@@ -51,7 +51,7 @@
 						</div>
 						<div class="member-info">
 							<h4><%= capa.descricao %></h4>
-							<p class="btn btn-danger"><%= link_to "Delete", capa_path(capa.id), method: "delete" %><p>
+							<p ><%= link_to "Delete", capa_path(capa.id), method: "delete", class: "btn btn-delete" %><p>
 						</div>
 					</div>
 				</div>
@@ -61,6 +61,3 @@
 		</div>
 	</section>
 	<% end %>
-
-
-    

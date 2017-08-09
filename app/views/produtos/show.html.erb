@@ -1,3 +1,60 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <h1><%= @produto.nome %></h1>
+  <div class="st-border"></div>
+  <div class="col-md-8">
+
+  <div id='home-carousel' class='carousel slide' data-ride='carousel'>
+    <div class='carousel-outer'>
+      <div class='carousel-inner'>
+        <div class='item active'style="background-image:url(<%= @produto.imagem.url(:medium) %>)">
+
+        </div>
+
+        <% @fotos.each do |f| %>
+        <div class='item' style="background-image:url(<%= f.imagem.url(:medium) %>)">
+
+        </div>
+        <% end %>
+
+      </div>
+      <a class='left carousel-control' href='#home-carousel' data-slide='prev'>
+        <span class='glyphicon glyphicon-chevron-left'></span>
+      </a>
+      <a class='right carousel-control' href='#home-carousel' data-slide='next'>
+        <span class='glyphicon glyphicon-chevron-right'></span>
+      </a>
+    </div>
+    <ol class='carousel-indicators'>
+      <li data-target='#home-carousel' data-slide-to='0' class='active'>  <%= image_tag @produto.imagem.url(:thumb) %></li>
+      <% @fotos.each do |f| %>
+      <li data-target='#home-carousel' data-slide-to='1'><%= image_tag f.imagem.url(:thumb) %></li>
+      <% end %>
+    </ol>
+  </div>
+  </div>
+
+  <div class="col-md-4">
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
 <div class="tag">
   <div class="container">
     <h2><%= @produto.nome %></h2>

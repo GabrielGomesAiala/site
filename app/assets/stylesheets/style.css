@@ -52,7 +52,7 @@
 		background-color: #fff;
 	}
 
-	a { 
+	a {
 		color: #000;
 		-webkit-transition: all 0.2s ease-in-out;
 		-moz-transition: all 0.2s ease-in-out;
@@ -158,8 +158,8 @@
 		color: #fff;
 	}
 
-	.btn-readmore{
-		background-color: #383838;
+	.btn-delete{
+		background-color: #AA3939;
 		border-radius: 0;
 		border: 0;
 		color: #fff;
@@ -173,9 +173,9 @@
 		transition: all 0.2s ease-in-out;
 	}
 
-	.btn-readmore:hover{
-		background-color: #000;
-		color: #fff;	
+	.btn-delete:hover{
+		background-color: #550000;
+		color: #fff;
 	}
 
 
@@ -263,7 +263,7 @@
 		text-align: left;
 		color: #fff;
 		text-shadow: none;
-		margin-top: -130px;	
+		margin-top: -130px;
 	}
 
 	.carousel-caption h1 {
@@ -283,8 +283,8 @@
 		margin-bottom:20px;
 	}
 
-	.home-carousel-left, 
-	.home-carousel-right {	
+	.home-carousel-left,
+	.home-carousel-right {
 		background-color: #f0f0f0;
 		color:#000;
 		font-size: 32px;
@@ -320,8 +320,8 @@
 	}
 	/* Carousel animation */
 
-	#home-carousel .item h1, 
-	#home-carousel .item h2, 
+	#home-carousel .item h1,
+	#home-carousel .item h2,
 	#home-carousel .item p {
 		opacity:0;
 		-moz-transform: scale(0.5);
@@ -339,8 +339,8 @@
 		transition: all 0.5s ease-in-out 0.15s;
 	}
 
-	#home-carousel .item.active h1, 
-	#home-carousel .item.active h2, 
+	#home-carousel .item.active h1,
+	#home-carousel .item.active h2,
 	#home-carousel .item.active p {
 		opacity:1;
 		-moz-transform: scale(1);
@@ -508,7 +508,7 @@
 
 
 /* 8. PRICING */
-	
+
 	#pricing{
 		background-color: #f5f5f5;
 		padding-top: 130px;
@@ -540,7 +540,7 @@
 		margin-bottom: 25px;
 	}
 
-	.st-pricing .st-border{
+ 	.st-border{
 		width: 100%;
 		margin-bottom: 15px;
 		background-color: #ccc;
@@ -564,7 +564,7 @@
 
 
 /* 9. ABOUT US */
-	
+
 	#about-us{
 		background-color: #f5f5f5;
 	}
@@ -588,8 +588,8 @@
 		padding-right: 0px;
 	}
 
-	.office-carousel-left, 
-	.office-carousel-right {	
+	.office-carousel-left,
+	.office-carousel-right {
 		background-color: #f0f0f0;
 		color:#000;
 		font-size: 32px;
@@ -740,7 +740,7 @@
 
 
 /* 12. FUN FACTS */
-	
+
 	#fun-facts{
 		background-color: #f5f5f5;
 		padding-top: 40px;
@@ -771,7 +771,7 @@
 		padding-top: 130px;
 		padding-bottom: 120px;
 	}
-	
+
 	.contact-info .contact-content{
 		margin-bottom: 30px;
 	}
@@ -805,7 +805,7 @@
 
 
 /* 14. BLOG */
-	
+
 	#page-header{
 		background-color: #f5f5f5;
 		padding-top: 50px;
@@ -840,8 +840,8 @@
 		opacity: 1;
 	}
 
-	.post-carousel-left, 
-	.post-carousel-right {	
+	.post-carousel-left,
+	.post-carousel-right {
 		background-color: #f0f0f0;
 		color:#000;
 		font-size: 32px;
@@ -1042,7 +1042,7 @@
 		margin-right: 10px;
 	}
 
-	
+
 /* 16. SCROLL TO TOP */
 
 	.scroll-up {
@@ -1086,3 +1086,178 @@
 
 
 
+	.gold{
+		color: #FFBF00;
+	}
+
+	/*********************************************
+						PRODUCTS
+	*********************************************/
+
+	.product{
+		border: 1px solid #dddddd;
+		height: 321px;
+	}
+
+	.product>img{
+		max-width: 230px;
+	}
+
+	.product-rating{
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+
+	.product-title{
+		font-size: 20px;
+	}
+
+	.product-desc{
+		font-size: 14px;
+	}
+
+	.product-price{
+		font-size: 22px;
+	}
+
+	.product-stock{
+		color: #74DF00;
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	.product-info{
+			margin-top: 50px;
+	}
+
+	/*********************************************
+						VIEW
+	*********************************************/
+
+	.content-wrapper {
+		max-width: 1140px;
+		background: #fff;
+		margin: 0 auto;
+		margin-top: 25px;
+		margin-bottom: 10px;
+		border: 0px;
+		border-radius: 0px;
+	}
+
+	.container-fluid{
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+
+	.view-wrapper {
+		float: right;
+		max-width: 70%;
+		margin-top: 25px;
+	}
+
+	.container {
+		padding-left: 0px;
+		padding-right: 0px;
+		max-width: 100%;
+	}
+
+	/*********************************************
+					ITEM
+	*********************************************/
+
+	.service1-items {
+		padding: 0px 0 0px 0;
+		float: left;
+		position: relative;
+		overflow: hidden;
+		max-width: 100%;
+		height: 321px;
+		width: 130px;
+	}
+
+	.service1-item {
+		height: 107px;
+		width: 120px;
+		display: block;
+		float: left;
+		position: relative;
+		padding-right: 20px;
+		border-right: 1px solid #DDD;
+		border-top: 1px solid #DDD;
+		border-bottom: 1px solid #DDD;
+	}
+
+	.service1-item > img {
+		max-height: 110px;
+		max-width: 110px;
+		opacity: 0.6;
+		transition: all .2s ease-in;
+		-o-transition: all .2s ease-in;
+		-moz-transition: all .2s ease-in;
+		-webkit-transition: all .2s ease-in;
+	}
+
+	.service1-item > img:hover {
+		cursor: pointer;
+		opacity: 1;
+	}
+
+	.service-image-left {
+		padding-right: 50px;
+	}
+
+	.service-image-right {
+		padding-left: 50px;
+	}
+
+	.service-image-left > center > img,.service-image-right > center > img{
+		max-height: 155px;
+	}
+
+
+	h4 {
+	    margin: 20px 10px 10px;
+	}
+	p {
+	    margin: 10px;
+	}
+
+	#carousel-example-generic {
+	    margin: 20px auto;
+	    width: 400px;
+	}
+
+	#carousel-custom {
+	    margin: 20px auto;
+	    width: 100%;
+	}
+	#home-carousel .carousel-indicators {
+	    margin: 10px 0 0;
+	    overflow: auto;
+	    position: static;
+	    text-align: left;
+	    white-space: nowrap;
+	    width: 100%;
+	}
+	#home-carousel .carousel-indicators li {
+	    background-color: transparent;
+	    -webkit-border-radius: 0;
+	    border-radius: 0;
+	    display: inline-block;
+	    height: auto;
+	    margin: 0 !important;
+	    width: auto;
+	}
+	#home-carousel .carousel-indicators li img {
+	    display: block;
+	    opacity: 0.5;
+	}
+	#home-carousel .carousel-indicators li.active img {
+	    opacity: 1;
+	}
+	#home-carousel .carousel-indicators li:hover img {
+	    opacity: 0.75;
+	}
+	#home-carousel .carousel-outer {
+	    position: relative;
+	}

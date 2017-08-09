@@ -2,45 +2,70 @@
 
 
 
-<div class="col-sm-4">
-	<div class="list-group">
-		<a href="#" class="list-group-item active">Produtos</a>
-		 <% @produtos.each do |produto| %>
-		 <% end %>
-    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-</div>
 
-
-<section id="our-team">
+<section id="pricing">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+
+				<h1>Produtos</h1>
+				<span class="st-border"></span>
+
+				<div class="col-md-3">
+					<div class="sidebar-widget">
+						<div class="blog-search">
+                            <form>
+                                <input type="text" name="search">
+                                <span>
+                                	<button id="submit_btn" class="search-submit" type="submit">
+                                    <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </form>
+                        </div>
+					</div>
+					<div class="sidebar-widget">
+						<h4 class="sidebar-title">Categories</h4>
+						<ul>
+							<li><a href="">Web Design</a></li>
+							<li><a href="">Web Development</a></li>
+							<li><a href="">Video</a></li>
+							<li><a href="">HTML</a></li>
+							<li><a href="">CSS</a></li>
+						</ul>
+					</div>
+
+
+				</div>
+
+
+				<div class="col-md-9">
 					<div class="section-title">
-						<h1></h1>
-						<span class="st-border"></span>
+
 					</div>
 				</div>
-        <% @produtos.each do |produto| %>
-				<div class="col-md-3 col-sm-6">
-					<div class="team-member">
-						<div class="member-image ">
-            <%= image_tag produto.imagem.url(:thumb),class:"img-responsive" %>
-							<div class="member-social">
-								  <%= link_to "Ver mais", produto_path(produto) %>
+  		<% @produtos.each do |produto| %>
+				<div class="col-sm-3">
+					<div class="st-pricing text-center">
 
+						<div class="portfolio-content">
+							<img class="img-responsive" src="<%= produto.imagem.url(:medium) %>" alt="">
+						</div>
 
-							</div>
-						</div>
-						<div class="member-info">
-							<h4><%= produto.nome %></h4>
-							<span><%= produto.descricao %></span>
-						</div>
+						<div class="st-border"></div>
+						<ul>
+							<li> <h5><%= produto.nome %><h5></li>
+							<li><%= produto.tipo %></li>
+							<li><%= produto.descricao %></li>
+
+						</ul>
+							<p ><%= link_to "Ver mais", produto_path(produto), class: "btn btn-send" %><p>
 					</div>
 				</div>
-        <% end %>
-
-
+				<% end %>
 
 			</div>
+			<%= will_paginate @produtos, renderer: BootstrapPagination::Rails, previous_label: "<", next_label:">" %>
 		</div>
+
+
 	</section>

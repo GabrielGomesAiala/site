@@ -37,6 +37,11 @@ gem "paperclip", "~> 5.0.0"
 #gem "aws-sdk","~> 1.16.1"
 gem 'jquery-rails'
 
+
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development do
