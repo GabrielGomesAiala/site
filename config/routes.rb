@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/admin/capas/new' => 'capas#new'
   post 'capas' => 'capas#create'
 
+
   get'/admin/produtos' => 'produtos#admin'
   get'/admin/produtos/new' => 'produtos#new'
   post'produtos' => 'produtos#create'

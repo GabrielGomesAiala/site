@@ -6,7 +6,8 @@
 <br>
 
 <div class="container">
-  <h1><%= @produto.nome %></h1>
+  <h1><%= @produto.nome %></h1>  <p class="recipe-delete"><%= link_to "Delete", produto_path(@produto), method: "delete", class: "btn btn-delete" %>
+  <a class="btn btn-novo" href="/admin/produtos/new/<%= @produto.id %>">nova foto</a><p>
   <div class="st-border"></div>
   <div class="col-md-8">
 
@@ -35,19 +36,19 @@
       <li data-target='#home-carousel' data-slide-to='0' class='active'>  <%= image_tag @produto.imagem.url(:thumb) %></li>
       <% @fotos.each do |f| %>
       <li data-target='#home-carousel' data-slide-to='1'><%= image_tag f.imagem.url(:thumb) %></li>
+
       <% end %>
     </ol>
   </div>
   </div>
 
-  <div class="col-md-4">
-
+  <div class="col-md-4 col-sm-4">
+    <h3><%= @produto.nome %>, <%= @produto.tipo %></h3>
+    <div class="st-border"></div>
+    <p><%= @produto.descricao %></p>
   </div>
 
 </div>
-
-
-
 
 
 

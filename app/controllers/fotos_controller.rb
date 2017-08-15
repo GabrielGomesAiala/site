@@ -21,7 +21,7 @@ class FotosController < ApplicationController
     @produto = Produto.find(@@id)
     @image = @produto.fotos.create(foto_params)
     if @image.save
-      redirect_to '/admin/produtos'
+      redirect_to '/produtos'
     else
       render 'new'
     end

@@ -178,7 +178,25 @@
 		color: #fff;
 	}
 
+	.btn-novo{
+		background-color: #00b200;
+		border-radius: 0;
+		border: 0;
+		color: #fff;
+		padding: 10px 20px;
+		margin-top: 20px;
+		text-transform: uppercase;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
 
+	.btn-novo:hover{
+		background-color: #007f00;
+		color: #fff;
+	}
 
 
 /* 4. HEADER */

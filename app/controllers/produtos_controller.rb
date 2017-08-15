@@ -20,7 +20,7 @@ class ProdutosController < ApplicationController
   def create
     @produto = Produto.new(produto_params)
     if @produto.save
-      redirect_to '/admin/produtos'
+      redirect_to '/produtos'
     else
       render 'new'
     end
