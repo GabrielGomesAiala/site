@@ -67,15 +67,15 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
 
-  config.paperclip_defaults = {
-  storage: :s3,
-  s3_credentials: {
-    bucket: ENV.('testesitegabriel'),
-    access_key_id: ENV.('AKIAIQR2M5TAPTMM2EIQ'),
-    secret_access_key: ENV.('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'),
-    s3_region: ENV.('sa-east-1'),
-  }
-}
+    config.paperclip_defaults = {
+      storage: :s3,
+      s3_credentials: {
+        bucket: ENV.fetch('S3_BUCKET_NAME'),
+        access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+        secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+        s3_region: ENV.fetch('AWS_REGION'),
+      }
+    }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
