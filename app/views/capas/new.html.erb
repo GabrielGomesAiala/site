@@ -1,19 +1,30 @@
-<div class="create">
-  <div class="container">
-   	<%= form_for @capa, :html => {multipart: true}  do |f| %>
 
-      <div class="field">
-        <%= f.label :cescricao %>
-    		<%= f.text_area :descricao %>
-      </div>
-      <div class="field">
-        <%= f.label :imagem %>
-    		<%= f.file_field :imagem %>
-      </div>
 
-  		<div class="actions">
-    		<%= f.submit "Create" %>
-  		</div>
-		<% end %>
-  </div>
-</div>
+
+
+<section id="pricing">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="section-title">
+           <h1>Nova Capa</h1>
+           <span class="st-border"></span>
+         </div>
+       </div>
+
+       <div class="col-sm-12">
+         <div class="st-pricing text-center">
+            <%= form_for @capa, :html => {multipart: true}  do |f| %>
+           <ul>
+             <li>Descrição</li>
+             <li><%= f.text_area :descricao %></li>
+              <li><%= f.file_field :imagem, class:"filestyle" %></li>
+           </ul>
+
+            <%= f.submit "Create", class:"btn btn-send" %>
+         </div>
+       </div>
+        <% end %>
+     </div>
+   </div>
+ </section>

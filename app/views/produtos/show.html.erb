@@ -49,34 +49,3 @@
   </div>
 
 </div>
-
-
-
-
-
-
-
-<div class="tag">
-  <div class="container">
-    <h2><%= @produto.nome %></h2>
-    <% if current_user  %>
-      <p class="recipe-delete"><%= link_to "Delete", produto_path(@produto), method: "delete" %><p>
-        <p class="recipe-delete"><a href="/admin/produtos/new/<%= @produto.id %>">foto new</a><p>
-    <% end %>
-
-    <div class="cards row">
-      <p><%= image_tag @produto.imagem.url(:medium) %></p>
-      <% @fotos.each do |f| %>
-      <div class="card col-xs-4">
-        <p><%= image_tag f.imagem.url(:medium) %></p>
-      </div>
-      <% if current_user  %>
-        <p class="recipe-delete"><%= link_to "Delete", foto_path(f.id), method: "delete" %><p>
-
-      <% end %>
-      <% end %>
-
-    </div>
-
-  </div>
-</div>

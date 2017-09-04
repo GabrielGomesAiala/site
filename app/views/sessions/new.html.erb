@@ -1,15 +1,21 @@
-<div class="login">
+<br>
+<section class="login">
 	<div class="container">
-		<div class="form">
+		<div class="row">
+			<div class="text-center st-pricing">
 
-      <h1>Log in</h1>
+				<div class="section-title">
+						<h1>Login</h1>
+						<span class="st-border"></span>
+					</div>
 
-			<%= form_for(:session, url: login_path) do |f| %>
-			  <%= f.email_field :email, :placeholder => "email" %>
-			  <%= f.password_field :password, :placeholder => "Password" %>
-			  <%= f.submit "Log in", class: "btn-submit" %>
-			<% end %>
-
-    </div>
+				<%= form_for(:session, url: login_path) do |f| %>
+					<p><%= f.email_field :email, :placeholder => "email" %></p>
+					<p><%= f.password_field :password, :placeholder => "Senha" %></p>
+			  	<p><%= f.submit "Log in", class: "btn btn-send" %></p>
+					<% end %>
+				</br>
+    	</div>
+		</div>
 	</div>
-</div>
+</section>

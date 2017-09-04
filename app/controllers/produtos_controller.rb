@@ -2,10 +2,12 @@ class ProdutosController < ApplicationController
 
   def index
     @produtos = Produto.all.paginate(page:params[:page],per_page:12)
+    @items = Produto.distinct.pluck(:tipo).uniq
   end
 
-  def admin
-    @produtos = Produto.all
+  def itens
+    @produtos= Produto.where(tipo: params[:tipo]).paginate(page:params[:page],per_page:12)
+    @items = Produto.distinct.pluck(:tipo).uniq
   end
 
   def show

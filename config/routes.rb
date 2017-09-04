@@ -31,6 +31,8 @@ Rails.application.routes.draw do
 
   get '/produtos' => 'produtos#index'
   get '/produtos/:id' => 'produtos#show'
+  get '/:tipo' => 'produtos#itens'
+
   resources :produtos
   resources :fotos
   resources :capas
