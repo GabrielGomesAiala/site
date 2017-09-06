@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/admin' => 'sessions#new'
   post 'login' => 'sessions#create'
-  get 'logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'
 
   get '/admin/capas' => 'capas#index'
   get '/admin/capas/new' => 'capas#new'

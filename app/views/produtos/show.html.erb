@@ -6,8 +6,14 @@
 <br>
 
 <div class="container">
-  <h1><%= @produto.nome %></h1>  <p class="recipe-delete"><%= link_to "Delete", produto_path(@produto), method: "delete", class: "btn btn-delete" %>
-  <a class="btn btn-novo" href="/admin/produtos/new/<%= @produto.id %>">nova foto</a><p>
+
+  <h1><%= @produto.nome %></h1>
+
+  <% if current_user %>
+  <p class="recipe-delete"><%= link_to "Deletar produto", produto_path(@produto), method: "delete", class: "btn btn-delete" %>
+  <a class="btn btn-novo" href="/admin/produtos/new/<%= @produto.id %>">nova imagem</a><p>
+  <% end %>
+
   <div class="st-border"></div>
   <div class="col-md-8">
 
@@ -49,3 +55,36 @@
   </div>
 
 </div>
+
+		<% if current_user  %>
+		<section id="our-team">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h1>Deletar Imagens</h1>
+						<span class="st-border"></span>
+					</div>
+				</div>
+
+
+
+				<% @fotos.each do |foto| %>
+
+				<div class="col-md-3 col-sm-6">
+					<div class="team-member">
+						<div class="member-image">
+							<img class="img-responsive" src="<%= foto.imagem.url(:medium) %>" alt="">
+
+						</div>
+						<div class="member-info">
+							<p ><%= link_to "deletar", foto_path(foto.id), method: "delete", class: "btn btn-delete" %><p>
+						</div>
+					</div>
+				</div>
+				<% end %>
+
+			</div>
+		</div>
+	</section>
+	<% end %>
