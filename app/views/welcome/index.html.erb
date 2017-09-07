@@ -1,30 +1,13 @@
 
 
+<% @capas.each do |capa| %>
 
 
-<section id="slider">
-		<div id="home-carousel" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
+			<img class="teste" src="<%= capa.imagem.url(:medium) %>" alt="">
+
+<% end %>
 
 
-				<% @capas.each_with_index do |photo, n| %>
-				<div class="item <%= n  == 0 ? 'active' : '' %>" style="background-image:url(<%= photo.imagem.url(:medium) %>)">
-
-					<div class="carousel-caption container">
-						<div class="row">
-							<div class="col-sm-7">
-								<h1><%= photo.descricao %> </h1>
-
-							</div>
-						</div>
-					</div>
-				</div>
-				<% end %>
-
-				
-			</div>
-		</div> <!--/#home-carousel-->
-    </section>
 
 
 		<% if current_user  %>
