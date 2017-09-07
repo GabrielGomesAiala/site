@@ -40,6 +40,7 @@
 
 	html, body {
 		height: 100%;
+
 	}
 
 	body {
@@ -207,6 +208,7 @@
 		min-height: 80px;
 		margin-bottom: 0;
 		border-radius: 0;
+		color: #A01223;
 	}
 
 	.st-navbar{
@@ -215,33 +217,34 @@
 	}
 
 	.st-navbar ul{
-		margin-top: 15px;
+		margin-top: 20px;
 	}
 
 	.st-navbar ul li a{
 		text-transform: uppercase;
-		font-weight: 600;
-		padding: 0;
+		font-weight: 700;
+		padding: 2px;
 		margin: 14px;
+		color: #A01223;
 	}
 
 	.st-navbar ul li a:hover,
 	.st-navbar ul li a:focus {
 		background-color: transparent;
-		color: #000;
+		color:#A01223;
 	}
 
 	.st-navbar .navbar-header{
-		margin-top: 25px;
+
 	}
 
 	.st-navbar .navbar-toggle .icon-bar {
-		background-color: #000;
+		background-color: #A01223;
 	}
 
 	.st-navbar .navbar-toggle{
-		margin-top: 7px;
-		margin-right: 25px;
+		margin-top: 35px;
+		margin-right: 35px;
 		padding: 0;
 		border-radius: 0;
 	}
@@ -259,16 +262,16 @@
 		background-repeat: no-repeat;
 		background-size:cover;
 		width:100%;
-		height: 650px;
+		height: 800px;
 	}
 
 	#home-carousel .item:before{
-		background-color: #000;
+
 		content: "";
 		height: 100%;
 		top: 0;
 		left: 0;
-		opacity: 0.5;
+
 		position: absolute;
 		width: 100%;
 	}
