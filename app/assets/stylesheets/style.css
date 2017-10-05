@@ -44,11 +44,11 @@
 	}
 
 	.teste2{
-		margin-top: 100px;
+		margin-top: 0px;
 		width: 100%;
 	}
 	.teste{
-		margin-top: 200px;
+		margin-top: 0px;
 		width: 100%;
 	}
 
@@ -271,7 +271,7 @@
 		background-repeat: no-repeat;
 		background-size:cover;
 		width:100%;
-		height: 800px;
+		padding-top: 56%;
 	}
 
 	#home-carousel .item:before{
@@ -535,6 +535,13 @@
 		color: #fff;
 	}
 
+    .test{  
+        
+        width: 100%;
+        background-size: cover;
+        padding-top: 56%;
+        
+    }
 
 
 /* 8. PRICING */
@@ -549,6 +556,7 @@
 		background-color: #fff;
 		padding-bottom: 10px;
 		margin-top: 10px;
+        
 		-webkit-transition: all 0.2s ease-in-out;
 		-moz-transition: all 0.2s ease-in-out;
 		-ms-transition: all 0.2s ease-in-out;

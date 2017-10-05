@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index' => 'welcome#index'
   root 'welcome#index'
+  get 'quemsomos' => 'quemsomos#index'
 
   get '/produtos' => 'produtos#index'
   get '/produtos/:id' => 'produtos#show'

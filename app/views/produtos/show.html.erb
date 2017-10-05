@@ -39,7 +39,7 @@
       </a>
     </div>
     <ol class='carousel-indicators'>
-      <li data-target='#home-carousel' data-slide-to='0' class='active'>  <%= image_tag @produto.imagem.url(:thumb) %></li>
+      <li data-target='#home-carousel' data-slide-to='0' class='active'>  <%= image_tag(@produto.imagem.url(:thumb),alt: @produto.nome) %></li>
       <% @fotos.each do |f| %>
       <li data-target='#home-carousel' data-slide-to='1'><%= image_tag f.imagem.url(:thumb) %></li>
 
