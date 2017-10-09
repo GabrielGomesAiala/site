@@ -6,9 +6,36 @@
 			<img class="teste" src="<%= capa.imagem.url(:medium) %>" alt="">
 
 <% end %>
+	
+	<div class="container">
+		
+		</br>
+		</br>
+		<div class="section-title">
+						<h1>Destaques</h1>
+						<span class="st-border"></span>
+					</div>
+			<% @destaque.each do |destaque|%>
+					<div class=" col-md-4">
+					<div class="st-pricing text-center">
+            
+                        <div class="test" style="background-image: url(<%= destaque.imagem.url(:medium) %>)">
+                          
+                        </div>						
+
+						<div class="st-border"></div>
+						<ul>
+							<li> <h5><%= destaque.nome %><h5></li>
+							<li><%= destaque.tipo %></li>
 
 
-
+						</ul>
+							<p ><%= link_to "Ver mais", produto_path(destaque), class: "btn btn-send" %><p>
+					</div>
+				</div>
+				<% end %>
+			</div>		
+</br>
 
 		<% if current_user  %>
 		<section id="our-team">
@@ -21,8 +48,8 @@
 					</div>
 				</div>
 
-
-
+				
+				
 				<% @capas.each do |capa| %>
 
 				<div class="col-md-3 col-sm-6">
