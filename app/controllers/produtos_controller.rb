@@ -27,7 +27,26 @@ class ProdutosController < ApplicationController
       render 'new'
     end
   end
-
+  
+   def update
+    @produto = Produto.find(params[:id])
+    @produto = Produto.update(produto_params)
+    if @produto.save
+      redirect_to '/produtos'
+    else
+      render 'new'
+    end
+  end
+  
+  def edit
+    @produto = Produto.find(params[:id])
+    @produto = Produto.update(produto_params)
+    if @produto.save
+      redirect_to '/produtos'
+    else
+      render 'new'
+    end
+  end
 
   def destroy
     @produto = Produto.find(params[:id])
@@ -37,7 +56,7 @@ class ProdutosController < ApplicationController
 
   private
   def produto_params
-    params.require(:produto).permit(:nome, :descricao, :imagem, :tipo)
+    params.require(:produto).permit(:nome, :descricao, :imagem, :tipo, :destaque)
   end
 
 end

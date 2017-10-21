@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731211034) do
+ActiveRecord::Schema.define(version: 20171020173010) do
 
   create_table "capas", force: :cascade do |t|
     t.string "descricao"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170731211034) do
     t.string "imagem_content_type"
     t.integer "imagem_file_size"
     t.datetime "imagem_updated_at"
+    t.boolean "destaque"
   end
 
   create_table "users", force: :cascade do |t|

@@ -11,7 +11,8 @@
 
 	<% if current_user %>
 	<p class="recipe-delete"><%= link_to "Deletar produto", produto_path(@produto), method: "delete", class: "btn btn-delete" %>
-		<a class="btn btn-novo" href="/admin/produtos/new/<%= @produto.id %>">nova imagem</a><p>
+		<a class="btn btn-novo" href="/admin/produtos/new/<%= @produto.id %>">nova imagem</a>
+		<a class="btn btn-novo" href="/admin/produtos/edit/<%= @produto.id %>">editar </a><p>
 	<% end %>
 
 	<div class="st-border"></div>

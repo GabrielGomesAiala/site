@@ -17,11 +17,13 @@ Rails.application.routes.draw do
 
   get'/admin/produtos' => 'produtos#admin'
   get'/admin/produtos/new' => 'produtos#new'
+  
   post'produtos' => 'produtos#create'
 
 
   get '/admin/produtos/images/:id' => 'fotos#show'
   get'/admin/produtos/new/:id' => 'fotos#new'
+
   post 'fotos/' => 'fotos#create'
 
   #incio site
