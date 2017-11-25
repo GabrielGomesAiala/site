@@ -17,7 +17,9 @@ Rails.application.routes.draw do
 
   get'/admin/produtos' => 'produtos#admin'
   get'/admin/produtos/new' => 'produtos#new'
+  get'/admin/produtos/edit/:id' => 'produtos#edit'
   
+
   post'produtos' => 'produtos#create'
 
 
