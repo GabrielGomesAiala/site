@@ -204,7 +204,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   paperclip (~> 5.0.0)
-  pg
+  pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.1)
   sass-rails (>= 3.2)

@@ -11,7 +11,7 @@ class ProdutosController < ApplicationController
   end
 
   def show
-    @produto = Produto.find(@)
+    @produto = Produto.find(params[:id])
     @fotos = @produto.fotos
   end
 
