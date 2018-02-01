@@ -57,39 +57,4 @@ class ProdutosController < ApplicationController
   
 
 end
-class Summoner < ApplicationRecord
-  
-  require 'rest-client'
-  require 'json'
-  
-  def self.returnapi (reg, nome)
-    url = 'https://'+reg+'.api.riotgames.com/lol/summoner/v3/summoners/by-name/'+nome+'?api_key=RGAPI-55e8092c-de1d-4ab5-9ffb-f6868bc4691a'
-    
-    
-    response = RestClient.get(url)
-    JSON.parse(response)
 
-    
-  end  
-  
-end
-
-
-  def index
-    @summoner = Summoner.new
-  end
-  
-  def geral
-    @summoner = Summoner.returnapi(params[:rg], params[:name])
-  end
-  
-
-
-    get '/summoner' => 'summoners#index'
-  get '/summoner/geral/:rg/:name' => 'summoners#geral'
-  
-
-
-  gem 'coffee-rails', '~> 4.2'
-
-gem 'rest-client'
