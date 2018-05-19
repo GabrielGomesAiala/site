@@ -1,0 +1,56 @@
+<section id="pricing">
+		<div class="container">
+			<div class="row">
+
+				<h1>Produtos</h1>
+				<span class="st-border"></span>
+
+				<div class="col-md-3 col-sm-3">
+					<div class="sidebar-widget">
+
+					</div>
+					<div class="sidebar-widget">
+						<h4 class="sidebar-title">Categorias</h4>
+						<ul>
+							<% @items.each do |item| %>
+								<li><a href="/<%= item %>"><%= item %></a></li>
+							<% end %>
+						</ul>
+					</div>
+
+
+				</div>
+
+
+				<div class="container col-md-9">
+					<div class="section-title">
+
+					</div>
+
+  		<% @produtos.each do |produto| %>
+				<div class=" col-md-4">
+					<div class="st-pricing text-center">
+            
+                        <div class="test" style="background-image: url(<%= produto.imagem.url(:medium) %>)">
+                          
+                        </div>						
+
+						<div class="st-border"></div>
+						<ul>
+							<li> <h5><%= produto.nome %><h5></li>
+							<li><%= produto.tipo %></li>
+
+
+						</ul>
+							<p ><%= link_to "Ver mais", produto_path(produto), class: "btn btn-send" %><p>
+					</div>
+				</div>
+				<% end %>
+
+
+			</div>
+			<%= will_paginate @produtos, renderer: BootstrapPagination::Rails, previous_label: "<", next_label:">" %>
+		</div>
+</div>
+
+	</section>
