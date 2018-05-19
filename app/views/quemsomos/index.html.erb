@@ -1,1 +1,29 @@
-ASDDSAFSDSADGFASDFGSADFHSJH
+<div class='container'>
+    <h2>Empresa</h2>
+    <div class='col-md-6'>Atuando no ramo desde 1999 a Loja San Telmo adquiriu vasta experiência que facilita você a ter soluções rápidas e eficientes para sua necessidade.
+    Nosso foco é na venda e instalação de pisos, cortinas e persianas; trabalhamos com total transparencia com nossos clientes e por consequencia disso possuimos diversas indicações de clientes nossos que aprovaram e recomendam nossos serviços.
+    Com a experiencia adquirida no decorrer dos anos contamos com excelentes profissionais para que possa passar tranquilidade aos nossos clientes, contando com instaladores de confiança e excelentes vendedores que possuem conhecimento técnico e que podem sanar suas dúvidas sobre os produtos que vendemos.
+    Somos plenamente capacitados para atender as suas necessidades.
+    Conte conosco!</div>
+    <div class='col-md-6' >
+    <% @destaque.each do |destaque|%>
+        <div class=" col-md-4">
+        <div class="st-pricing text-center">
+
+            <div class="test" style="background-image: url(<%= destaque.imagem.url(:medium) %>)">
+              
+            </div>						
+
+            <div class="st-border"></div>
+            <ul>
+                <li> <h5><%= destaque.nome %><h5></li>
+                <li><%= destaque.tipo %></li>
+
+
+            </ul>
+                <p ><%= link_to "Ver mais", produto_path(destaque), class: "btn btn-send" %><p>
+        </div>
+    </div>
+    <% end %>
+    </div>
+</div>

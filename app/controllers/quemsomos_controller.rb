@@ -1,6 +1,7 @@
 class QuemsomosController < ApplicationController
   
   def index
-  end  
+	  @destaque = Produto.where(destaque: 't')  
+  end
   
 end
